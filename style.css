@@ -17,15 +17,15 @@ header{
  height: 100px;
 }
 
-.nav-panel {}
-.nav-panel nav {
+
+nav {
     display: inline-block;
     /* display: flex;
     justify-content: center; */
     padding-bottom: 0;
     margin-top: 20px;
 }
-.nav-panel a {
+nav a {
     float: left;
     padding: 20px 15px;
     text-decoration: none;
@@ -33,7 +33,7 @@ header{
     color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
-.nav-panel a:hover {
+nav a:hover {
     background-color: black;
     color: white;
 }
@@ -97,19 +97,62 @@ header{
 }
 
 .services{
-background-color: #F2FDFF;
-text-align: center;
-margin: 50px auto 0;
+    /* background-color: #F2FDFF; */
+    background-color: #A9D8B8;
+    text-align: center;
+    margin: 50px auto 0;
+}
+.services h2{
+    padding: 80px 0px 10px;    
 }
 .services p{
-display: block;
-width: 400px;
-margin-left: auto;
-margin-right: auto;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
+.lnr-paperclip {
+    font-size: 40px;
+    padding-top: 40px;
+  }
 .services-box{
-    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 900px;
+}
+.services-smallbox{
+    width: 230px;
+    height: 280px;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.services-smallbox a{
+    padding: 18px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+.services-smallbox a:hover{
+    background-color: #3E8989;
+    color: white;
+}
+.services-smallbox p{
+    width: auto;
+    padding: 10px;
+}
+.services-smallbox h3{
+    width: auto;
+    padding: 10px;
+}
 
 
