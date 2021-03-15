@@ -1,65 +1,85 @@
-*{margin: 0;
-    padding: 0;
-    box-sizing: border-box;}
-
 body {
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 15px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 15px;
 }
 
 header img {
-    float: left;
-    width: 75px;
-    margin-top: 20px;
-
-}
-header{
- height: 100px;
+  float: left;
+  width: 75px;
+  margin-top: 20px;
 }
 
+header {
+  height: 100px;
+}
 
 nav {
-    display: inline-block;
-    /* display: flex;
+  display: inline-block;
+  /* display: flex;
     justify-content: center; */
-    padding-bottom: 0;
-    margin-top: 20px;
-}
-nav a {
-    float: left;
-    padding: 20px 15px;
-    text-decoration: none;
-    font-size: 20px;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-}
-nav a:hover {
-    background-color: black;
-    color: white;
+  padding-bottom: 0;
+  margin-top: 20px;
 }
 
-.top-section {  
-    background-image: url("/wideSectionBack.jpg");
-    background-repeat: no-repeat;
-    background-position-x: center;
-    letter-spacing: 5px;
-    height: calc(80vh - 100px);
-    /* padding: 80px 100px; */
-    font-size: 50px;
-    color: white;
-    background-size: cover;
-    text-shadow: 0 5px 20px black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+h1.first-headline {
+  font-size: 5rem;
+  font-weight: 600;
 }
-.top-section h1, p{
-    text-align: center;
+
+nav a {
+  float: left;
+  padding: 20px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.flexssilki{
-    display: flex;
+
+nav a:hover {
+  background-color: black;
+  color: white;
 }
-.top-section a{
+
+/* SECTIONS */
+.someinfo,
+.info,
+.services {
+  height: 100vh;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-section {
+  background-image: url('./assets/wideSectionBack.jpg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  letter-spacing: 5px;
+  /* viewpoert units works bad in mobile browsers (100vh) */
+  height: calc(100vh - 100px);
+  /* padding: 80px 100px; */
+  font-size: 50px;
+  color: white;
+  background-size: cover;
+  text-shadow: 0 5px 20px black;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-section h1,
+p {
+  text-align: center;
+}
+
+.flexssilki {
+  display: flex;
+}
+
+.top-section a {
   border: 3px solid white;
   margin: 50px;
   padding: 0 10px;
@@ -67,92 +87,156 @@ nav a:hover {
   color: white;
   font-size: 70%;
 }
-.top-section a:hover{
-    color: black;
-    border: 3px solid black;
+
+.top-section a:hover {
+  color: black;
+  border: 3px solid black;
 }
 
-.someinfo{
-    text-align: center;
-    margin: 50px auto 0;
-    display: block;
-    width: 400px;
+.info {
+  padding-top: 15rem;
+  display: block;
+  text-align: center;
 }
-.info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.info-item{
-    width: 20%;
-    margin: 50px auto 50px auto; 
-    text-align: center; 
-    height: 300px;
-}
-.info img{
-    padding-top: 20px;
-    display: block;
-    margin: 0 auto;
+.info p{
+  padding-top: 1rem;
+width: 50%;
+ margin-left: auto;
+ margin-right: auto;
 }
 
-.services{
-    /* background-color: #F2FDFF; */
-    background-color: #A9D8B8;
-    text-align: center;
-    margin: 50px auto 0;
+.info-block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.services h2{
-    padding: 80px 0px 10px;    
+
+.info-item {
+  width: 20%;
+  margin: 50px auto 50px auto;
+  text-align: center;
+  height: 300px;
 }
-.services p{
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+.info-item p {
+width: auto;
 }
+
+.info img {
+  padding-top: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.services {
+  /* background-color: #F2FDFF; */
+  background-color: #a9d8b8;
+  text-align: center;
+  margin: 50px auto 0;
+  display: block;
+}
+
+.services h2 {
+  padding: 3rem 0 1rem;
+}
+
+.services p {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+}
+
 .lnr-paperclip {
-    font-size: 40px;
-    padding-top: 40px;
+  font-size: 40px;
+  /* padding-top: 40px; */
+}
+
+.services-list {
+  padding: 1rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 100%;
+
+  list-style: none;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-list li {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  width: calc(100% / 3 - 2rem);
+
+  text-align: center;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  color: black;
+  background-color: white;
+
+  transition: 0.6s all;
+}
+
+/* Content flow */
+.services-list li * {
+  margin-bottom: 1rem;
+}
+
+.services-list li *:last-child {
+  margin-bottom: 0;
+}
+
+.services-list li:hover {
+  color: white;
+  background-color: #3e8989;
+
+  transform: scale(1.05);
+  border-color: white;
+
+  transition: 0.3s all;
+}
+
+.services-list li:nth-child(3n) {
+  margin-right: 0;
+}
+
+.services-list li h3 {
+  width: auto;
+  /* padding: 10px; */
+}
+
+.services-list li p {
+  width: auto;
+  /* padding: 10px; */
+}
+
+.services-list li a {
+  padding: 1rem 2rem;
+
+  text-decoration: none;
+
+  color: inherit;
+  border: 1px solid black;
+  border-color: inherit;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 900px) {
+  .services-list {
+    flex-flow: column nowrap;
   }
-.services-box{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
 
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
+  .services-list li {
+    margin: 0;
+    margin-bottom: 2rem;
 
-    width: 900px;
+    width: 50%;
+  }
 }
-.services-smallbox{
-    width: 230px;
-    height: 280px;
-    text-align: center;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.services-smallbox a{
-    padding: 18px;
-    text-decoration: none;
-    color: black;
-    background-color: white;
-}
-.services-smallbox a:hover{
-    background-color: #3E8989;
-    color: white;
-}
-.services-smallbox p{
-    width: auto;
-    padding: 10px;
-}
-.services-smallbox h3{
-    width: auto;
-    padding: 10px;
-}
-
-
